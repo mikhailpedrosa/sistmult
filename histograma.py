@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Mikhail Pedrosa <mikhail.jose@hotmail.com>'
-__description__ = 'Verifica arquivos RAWs copiados e cria os produtos PPI e CAPPI .dat.'
+__description__ = 'Cria Histograma a partir de uma Foto .jpg'
 __version__ = '0.1'
 __date__ = '15/09/2014'
 
