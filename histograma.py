@@ -4,19 +4,21 @@ __description__ = 'Cria Histograma a partir de uma Foto .jpg'
 __version__ = '0.1'
 __date__ = '15/09/2014'
 
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
 from pylab import *
 
 def gerarHist(matriz):
-    plot.hist(matriz.flatten(), color='green')
-    plot.title = ('Histograma')
-    plot.show()
+    plt.hist(matriz.flatten(), color='green')
+    plt.title('Histograma')
+    plt.xlabel('Pixel')
+    plt.ylabel('Ocorrencias')
+    plt.show()
 
 if __name__ == '__main__':
 
-    imagem = Image.open("logotipoceara.jpg")
+    imagem = Image.open("fotocinza2.jpg")
     matriz = np.asarray(imagem.convert('L'))
 
     #r, g, b = imagem.split()
