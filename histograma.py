@@ -4,12 +4,6 @@ __description__ = 'Operações com Imagens - Histograma, Operações Pontuais, L
 __version__ = '0.1'
 __date__ = '15/09/2014'
 
-
-import cv
-from PIL import Image
-from pylab import *
-
-=======
 import matplotlib.pyplot as plt
 import cv
 import numpy as np
