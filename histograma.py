@@ -31,6 +31,21 @@ def gerarHist(imagem1, imagem2):
     plt.ylabel('Ocorrencias')
     plt.show()
 
+def soma(imagem1, imagem2):
+    #imagem1.paste(imagem2, (0,0), imagem2)
+    #imagem1.show()
+
+
+
+    height, widht = imagem1.size
+    matriz_imagem = np.array(imagem1)
+    for row in range(height):
+        for col in range(widht):
+            rgb_imagem1 = imagem1.getpixel((row,col))
+            rgb_imagem2 = imagem2.getpixel((row,col))
+            matriz_imagem = np.append(rgb_imagem1.asarray(), rgb_imagem2.asarray())
+
+    matriz_imagem.show()
 
 def rotacao(imagem1, imagem2):
 
@@ -61,7 +76,8 @@ if __name__ == '__main__':
 
     #Operações Pontuais
     #Operações Aritméticas (Soma, Subtração, Multiplicação, Divisão)
-    rgb = imagem1.convert('RGB')
+    soma(imagem1, imagem2)
+
 
     #Operações Lógicas (And, Ou, Xor)
 
@@ -88,7 +104,7 @@ if __name__ == '__main__':
 
 
     #Espelhamento ou Reflexão
-    espelhamento(imagem1, imagem2)
+    #espelhamento(imagem1, imagem2)
 
     #r, g, b = imagem.split()
     #im = Image.merge("RGB", (b, g, r))
