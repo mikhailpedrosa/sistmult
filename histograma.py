@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-__author__ = 'Mikhail Pedrosa <mikhail.jose@hotmail.com> e Tiago Alves'
+__author__ = 'Mikhail Pedrosa <mikhail.jose@hotmail.com>
 __description__ = 'Operações com Imagens - Histograma, Operações Pontuais, Lógicas, Aritméticas, Translação, Rotação e Escala'
 __version__ = '0.1'
 __date__ = '15/09/2014'
