@@ -218,6 +218,26 @@ def XOR(imagem1, imagem2):
 
     return imagem1.save('xor.png')
 
+def translacao (imagem1):
+    destino = Image.open("foto.png")
+    #Tamanho Imagem - Largura e Altura
+    lar = destino.size[0]
+    alt = destino.size[1]
+    x_loc = 200
+    y_loc = 200
+    imagem_original = np.asarray(destino.convert('RGB'))
+    for x in range(lar):
+        for y in range(alt):
+            if x >= x_loc and y >= y_loc:
+                yo = x - x_loc
+                xo = y - y_loc
+                destino.putpixel((x,y), (imagem_original[xo,yo][0],imagem_original[xo,yo][1],imagem_original[xo,yo][2]))
+            else:
+                destino.putpixel((x,y), (255, 255, 255, 255))
+    
+    return destino.save("translate.png")
+
+
 if __name__ == '__main__':
     # Leitura das Imagens e Conversão para RGB
     imagem1 = Image.open("foto1.jpg").convert('RGB')
